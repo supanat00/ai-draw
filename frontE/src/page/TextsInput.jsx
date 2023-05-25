@@ -34,7 +34,14 @@ const TextsInput = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        const response = await fetch(
+          
+          // localhost
+          // 'http://localhost:8080/api/v1/dalle'
+          
+          //render
+          'https://backapi-ivar.onrender.com/api/v1/dalle'
+          , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -83,7 +90,16 @@ const TextsInput = () => {
         const translations = [];
   
         for (const text of textsToTranslate) {
-          const response = await fetch('http://localhost:8080/api/v1/trantexts/translate', {
+          const response = await fetch(
+            
+            //localhost
+            // 'http://localhost:8080/api/v1/trantexts/translate'
+            
+            //render
+            'https://backapi-ivar.onrender.com/api/v1/trantexts/translate'
+            
+            
+            , {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -117,7 +133,15 @@ const TextsInput = () => {
         if (randomPrompt) {
           try {
             setGeneratingImg(true);
-            const response = await fetch('http://localhost:8080/api/v1/dalle', {
+            const response = await fetch(
+              
+              //localhost
+              // 'http://localhost:8080/api/v1/dalle'
+              
+              //render
+              'https://backapi-ivar.onrender.com/api/v1/dalle'
+              
+              , {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -156,7 +180,13 @@ const TextsInput = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:8080/api/v1/post', {
+        const response = await fetch(
+          //localhost
+          // 'http://localhost:8080/api/v1/post'
+          
+          //reander
+          'https://backapi-ivar.onrender.com/api/v1/post'
+          , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

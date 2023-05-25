@@ -29,7 +29,14 @@ const TranTexts = () => {
       try {
         setLoading(true);
   
-        const response = await fetch('http://localhost:8080/api/v1/trantexts/translate', {
+        const response = await fetch(
+          //localhost
+          // 'http://localhost:8080/api/v1/trantexts/translate'
+          
+          //render
+          'https://backapi-ivar.onrender.com/api/v1/trantexts/translate'
+
+          , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -28,10 +28,10 @@ const Home = () => {
     try {
       const response = await fetch(
         /*Localhost*/
-        'http://localhost:8080/api/v1/post'
+        // 'http://localhost:8080/api/v1/post'
 
         /*Render*/
-        // 'https://dalle-arbb.onrender.com/api/v1/post'
+        'https://backapi-ivar.onrender.com/api/v1/post'
         
         , {
         method: 'GET',

@@ -32,10 +32,10 @@ const CreatePost = () => {
           
           
           /*Localhost*/
-          'http://localhost:8080/api/v1/dalle'
+          // 'http://localhost:8080/api/v1/dalle'
 
           /*Render*/
-          // 'https://dalle-arbb.onrender.com/api/v1/dalle'
+          'https://backapi-ivar.onrender.com/api/v1/dalle'
           
           , {
           method: 'POST',
@@ -67,10 +67,10 @@ const CreatePost = () => {
       try {
         const response = await fetch(
           /*Localhost*/
-          'http://localhost:8080/api/v1/post'
+          // 'http://localhost:8080/api/v1/post'
           
           /*Render*/
-          // 'https://dalle-arbb.onrender.com/api/v1/post'
+          'https://backapi-ivar.onrender.com/api/v1/post'
           , {
           method: 'POST',
           headers: {
