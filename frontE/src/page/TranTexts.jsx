@@ -67,7 +67,14 @@ const TranTexts = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        const response = await fetch(
+          
+          //local
+          // 'http://localhost:8080/api/v1/dalle'
+          
+          //render
+          'https://backapi-ivar.onrender.com/api/v1/dalle'
+          , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -94,7 +101,12 @@ const TranTexts = () => {
       try {
         setLoading(true);
   
-        const response = await fetch('http://localhost:8080/api/v1/trantexts/translate', {
+        const response = await fetch(
+          //local
+          // 'http://localhost:8080/api/v1/trantexts/translate'
+          //render
+          'https://backapi-ivar.onrender.com/api/v1/trantexts/translate'
+          , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -108,7 +120,12 @@ const TranTexts = () => {
           if (translation) {
             try {
               setGeneratingImg(true);
-              const imageResponse = await fetch('http://localhost:8080/api/v1/dalle', {
+              const imageResponse = await fetch(
+                //local
+                // 'http://localhost:8080/api/v1/dalle'
+                //render
+                'https://backapi-ivar.onrender.com/api/v1/dalle'
+                , {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -159,7 +176,12 @@ const TranTexts = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:8080/api/v1/post', {
+        const response = await fetch(
+          //local
+          // 'http://localhost:8080/api/v1/post'
+          //render
+          'https://backapi-ivar.onrender.com/api/v1/post'
+          , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
