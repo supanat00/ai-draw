@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { preview } from '../assets';
-import { getRandomPrompt } from '../utils';
 import { FormField, Loader } from '../components';
 
 const Home = () => {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    name: '',
     prompt: '',
     photo: '',
   });
@@ -19,10 +17,6 @@ const Home = () => {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSurpriseMe = () => {
-    const randomPrompt = getRandomPrompt(form.prompt);
-    setForm({ ...form, prompt: randomPrompt });
-  };
 
   const generateImage = async () => {
     if (form.prompt) {
