@@ -9,7 +9,6 @@ const Home = () => {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    name: '',
     prompt: '',
     photo: '',
   });
@@ -101,15 +100,6 @@ const Home = () => {
 
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5">
-          <FormField
-            labelName="Your Name"
-            type="text"
-            name="name"
-            placeholder="Ex., john doe"
-            value={form.name}
-            handleChange={handleChange}
-          />
-
           <FormField
             labelName="Prompt"
             type="text"
