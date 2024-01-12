@@ -1,11 +1,3 @@
-import Home from './Home';
-import CreatePost from './CreatePost';
-import TranTexts from './TranTexts';
-import TextsInput from './TextsInput';
+import Home from "./Home";
 
-export {
-  Home,
-  CreatePost,
-  TranTexts,
-  TextsInput,
-};
+export { Home };
