@@ -2,6 +2,7 @@ import React from 'react';
 
 const FormField = ({
   type,
+  name,
   placeholder,
   value,
   handleChange,
@@ -12,7 +13,7 @@ const FormField = ({
 }) => (
   <div>
     <div className="flex items-center gap-2 mb-2">
-      {isSurpriseMe && (
+     {isSurpriseMe && (
         <button
           type="button"
           onClick={handleSurpriseMe}
@@ -33,6 +34,8 @@ const FormField = ({
     </div>
     <input
       type={type}
+      id={name}
+      name={name}
       className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6469ff] focus:border-[#6469ff] outline-none block w-full p-3"
       placeholder={placeholder}
       value={value}
